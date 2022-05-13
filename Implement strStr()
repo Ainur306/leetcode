@@ -1,0 +1,14 @@
+class Solution(object):
+    def strStr(self, haystack, needle):
+        """
+        :type haystack: str
+        :type needle: str
+        :rtype: int
+        """
+        total = 0
+        for i in range(len(haystack)):
+            if needle in haystack:
+                total = haystack.index(needle)    
+            if needle not in haystack:
+                total = -1
+        return total
